@@ -1,0 +1,97 @@
+<name>85.detail</name>
+<description>Video format
+Record with slaves inside:
+http://cds.cern.ch/record/999460?of=hm
+Record without slave:
+http://cds.cern.ch/record/1019839?of=hm
+Detailed format shows how to reconstruct slaves
+</description>
+
+<BFE_CERN_MODIFY_PROSEL prefix='<div style="text-align:right;font-size:small;">' suffix='</div>'/>
+<BFE_CERN_CLAIM prefix='<div style="text-align:right;font-size:small;">' suffix='</div>'/>
+<BFE_CERN_MODIFY_MULTIMEDIA prefix='<div style="text-align:right;font-size:small;">' suffix='</div>'/>
+
+<!-- Moved all hardcoded css to 85.detail.css -->
+<link href="/img/85.detail.css" type="text/css" rel="stylesheet" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<script type="text/javascript">
+$(function(){
+    function update_seealso_visibility(){
+        if($(window).width() < 1050) {
+            $(".video_content_right").css("display", "none");
+            $(".video_content_wrapper").css("maxWidth", $(".video_content_left").width());
+        }
+        else {
+            $(".video_content_right").css("display", "block");
+            $(".video_content_wrapper").css("maxWidth", "1000px");
+        }
+    };
+    $(window).resize(update_seealso_visibility);
+    update_seealso_visibility();
+});
+</script>
+
+<div class="video_content_wrapper">
+    <div class="video_content_left">
+        <div style="width:640px; min-height:360px; margin-bottom: 10px;">
+            <BFE_CERN_MOVIE display_as="embed" media_type="slave" max_nb="1" />
+        </div>
+        <div class="video-title-header">
+            <h1><BFE_CERN_TITLE_MULTIMEDIA main_only="no" subtitle_prefix="<div class='video-title-sub-header'>" subtitle_suffix="</div>"/></h1>
+        </div>
+
+<BFE_ABSTRACT prefix='<div style="font-size:13px;  margin-bottom:5px">' suffix="</div>" prefix_fr='<br/><span style="color:#797979;">' escape="0"/>
+        <div style="font-size:14px;">
+            <BFE_CERN_DURATION_MULTIMEDIA suffix=" / " /><BFE_CERN_DATE suffix=" / "/> <BFE_COPYRIGHT prefix="<strong>" suffix="</strong>" auto_link_to_CERN_license="yes" instances_separator=" / " show_material="yes"/><br/>
+
+            <BFE_CERN_AUTHORS_MULTIMEDIA print_affiliations="yes" separator="<br/>"
+                                 print_links="false" print_affiliation_first="yes" join_same_affiliation="yes"
+                                 affiliation_prefix="<b>" affiliation_suffix="</b>: " suffix="<br/>"/>
+            <BFE_CERN_KEYWORDS prefix="<b>Keywords: </b>" separator=", " cern_keywords_only="no" other_langs="yes" suffix="<br/>"/>
+            <BFE_FIELD tag="541__e" prefix="<b>Original Source: </b>" suffix="<br/>">
+            <BFE_CERN_LANGUAGES prefix="<b>Language: </b>" suffix="<br/>" />
+            <BFE_FIELD tag="508__a" prefix="<b>Camera operator: </b>" suffix="<br/>" instances_separator=", ">
+            <BFE_CERN_PHYSICAL_MEDIUM prefix="<b>Source medium: </b>" suffix="<br/>" />
+            <BFE_CERN_NOTE prefix="<b>Note: </b>" suffix="" default="" escape="" separator="<br />" suffix="<br/>" />
+            <BFE_PRIMARY_REPORT_NUMBER prefix="<b>Reference: </b>" suffix="<br/>" />
+            <BFE_CERN_MOVIE_SERIES_RN prefix="<b>Series reference: </b>" link="yes" suffix="<br/>" />
+            <BFE_CERN_RELATED_LINK prefix='<b>Related links:</b><br/><span style="margin-left: 15px;">'
+                           separator='</span><br/><span style="margin-left: 15px;">'
+                           suffix="</span><br/>"/>
+            <BFE_FULLTEXT prefix='<b>Aditional resources:</b><br/><span style="margin-left: 15px;">'
+                  separator='</span><br/><span style="margin-left: 15px;">'
+                  suffix="</span>"/>
+        </div>
+        <br />
+        <div style="margin-top:20px; padding-top:20px; border-top:1px solid #ddd">
+            <BFE_CERN_MOVIE display_as="js_css_for_control_buttons" button_list="download,embed,share">
+            <div class="video_control_container">
+                    <a id="video_controlbutton_download" rel="download_button" class="video_controlbutton hover" href="#">Download</a>
+                    <a id="video_controlbutton_embed" rel="embed_button" class="video_controlbutton" href="#">Embed</a>
+            </div>
+            <div class="video_control_content">
+                <div id="video_detailbox_download">
+                    <BFE_CERN_MOVIE display_as="download_box" />
+                </div>
+                <div id="video_detailbox_embed">
+                    <BFE_CERN_MOVIE display_as="code" />
+                </div>
+            </div>
+        </div>
+        <br/>
+        <div class="webcomment_header_comments_video">Comments</div>
+        <div class="video_comment_body">  <BFE_COMMENTS show_reviews="False" /> </div>
+
+        <BFE_RECORD_STATS prefix='<span style="font-size:small;color:#999;">This page has been viewed by '
+                       suffix=" users</span>"
+                       display='total_distinct_ip_nb_views'/>
+
+    </div>
+    <div class="video_content_right" >
+        <BFE_CERN_MOVIE_SIMILAR nb_max='8' display_recent_too="yes" />
+        <div style="clear:both;"></div>
+        <BFE_CERN_MOVIE_MORE_SIMILAR  />
+    </div>
+</div>
+

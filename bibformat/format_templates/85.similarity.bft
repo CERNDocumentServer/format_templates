@@ -1,0 +1,36 @@
+<name>85.similarity</name>
+<description>Similar videos format</description>
+
+<div style="width: 100%; height: 90px; border-bottom: 1px solid #DDDDDD; margin-bottom: 5px;">
+
+   <div class="bfe_cern_movie_thumbnail" style="float: left; width: 48%; overflow: hidden; padding-right: 2%;">
+        <BFE_CERN_MOVIE display_as="embed" 
+                        media_type="thumbnail" 
+                        max_nb="1"
+                        width="150"
+                        max_heigth="84" 
+                        resolve_movie_path='no'
+                        magnify="no"
+                        thumb_link_to_detailed_record="yes"/>
+    </div>
+
+    <div style="float:right; width: 48%; overflow: hidden; padding-left: 2%; line-height: 100%;">
+
+        <a href="/record/<BFE_RECORD_ID/>" title="See also" alt="See also" style="color: #333333;">
+
+            <span style="font-weight: bold; font-size: 90%;">
+                <BFE_CERN_TITLE_MULTIMEDIA length="80"/>
+            </span>
+
+            <br />
+
+            <span style="font-size: 80%;">
+                <BFE_CERN_DURATION_MULTIMEDIA prefix="Duration: " suffix="<br />">
+                <BFE_CERN_DATE prefix="Date: "/> 
+            </span>
+
+        </a>
+
+    </div>
+
+</div>

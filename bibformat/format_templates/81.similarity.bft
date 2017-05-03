@@ -1,0 +1,16 @@
+<name>81.similarity</name>
+<description>Similar photos format</description>
+<table cellspacing="3" cellpadding="3" border="0">
+  <tr>
+<td align="center" valign="middle">
+<BFE_CERN_PHOTO_THUMBNAILS limit="1" style="width:70px" print_links="yes"/>
+</td>
+
+<td valign="top" align="left"><strong>
+<a href="/record/<BFE_RECORD_ID />">
+<BFE_TITLE separator="<br />"/>
+</a></strong>
+</td>
+
+</tr>
+</table>

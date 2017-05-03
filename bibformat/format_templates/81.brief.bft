@@ -1,0 +1,23 @@
+<name>81 Brief</name>
+<description>Brief: Photos ($Revision: 1.9 $)</description>
+<!-- C-START REC 81.Brief -->
+
+<table style="width:90%;display:inline;">
+  <tr>
+      <td valign="top" align="center" width="180px">
+        <BFE_CERN_PHOTO_THUMBNAILS limit="1" style="max-width:180px" use_cover_photos_only="yes" />
+        <br />
+        <BFE_CERN_PRIMARY_REPORT_NUMBER prefix='<span style="color:#999;font-size:x-small">'
+                                        suffix='</span><br />' />
+        <span style="font-size:x-small;font-weight:700"><BFE_COPYRIGHT show_licenses="no" default="&copy; CERN"></span>
+      </td>
+      <td valign="top" align="left" style="padding-left:10px">
+        <strong><BFE_CERN_TITLE_BRIEF /></strong>
+        <!--<BFE_FIELD prefix="<br />" tag="269__c" />-->
+        <BFE_CERN_DATE date_format="%d-%m-%Y" prefix="<br />" />
+        <BFE_CERN_KEYWORDS prefix="<br/> <em>Keywords</em>: " separator=", " cern_keywords_only="no" other_langs="yes" />
+        <BFE_CERN_PHOTO_TIRAGE prefix="<br /><em>Tirage(s)</em>: " mode="count" />
+        <BFE_CERN_PHOTO_THUMBNAILS style="max-width:100px;height:50px" min_photos="2" limit="4" prefix="<br />" separator=" " print_links='yes' focus_on_click='yes'/>
+      </td>
+  </tr>
+</table>

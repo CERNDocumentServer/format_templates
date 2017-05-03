@@ -1,0 +1,23 @@
+<name>85.horizontal</name>
+<description>Displays video list horizontally</description>
+<!-- 85.horizontal -->
+
+<style type="text/css">
+    .videoTitle {text-decoration:none;}
+    .videoTitle:hover {text-decoration:underline;}
+</style>
+
+<div style="height: 200px; float: left; margin: 10px;">
+<div style="padding: 4px; border: 1px solid gray; float: left;">
+    <BFE_CERN_MOVIE display_as="embed" media_type="thumbnail" max_nb="1" width="180" magnify="no" thumb_link_to_detailed_record="yes" />
+    <div style="font-size:8pt; width:180px; text-align:center;">
+        <p style="height: 42px; margin: 0;">
+            <a class="videoTitle" href="/record/<BFE_RECORD_ID />" ><BFE_CERN_TITLE_MULTIMEDIA main_only="yes" length="60" /></a>
+        </p>
+        <BFE_DURATION prefix="<small>" suffix=" / </small>" output_format="%(M)02i:%(S)02i" input_units="m" />
+        <BFE_CERN_DATE prefix="<small>" suffix="</small>" />
+        <BFE_CERN_LANGUAGES prefix="<small> / " suffix="</small>" />
+    </div>
+</div>
+</div>
+
